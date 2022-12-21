@@ -1,0 +1,8 @@
+create venv (python 3.10)
+activate venv
+pip install fastapi
+pip install uvicorn
+create main.py
+import fast api
+create instance
+Run uvicorn main:app --reload
