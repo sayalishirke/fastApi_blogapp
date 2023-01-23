@@ -1,8 +1,22 @@
 create venv (python 3.10)
 activate venv
+
 pip install fastapi
 pip install uvicorn
+pip install -r requirements.txt
+
 create main.py
 import fast api
 create instance
 Run uvicorn main:app --reload
+
+localhost/docs -> swaggerui
+localhost/redoc -> swaggerui
+
+create database.py -> connection to database -> engine
+                    ->SessionLocal -> session
+                    -> Base
+
+create models.py -> class (table in db)
+
+update main.py -> models.Base.metadata.create_all(engine) # create all models
