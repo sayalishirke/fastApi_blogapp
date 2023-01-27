@@ -10,21 +10,26 @@ class Blog(BaseModel):
 
 
 class User(BaseModel):
-    name:str
+    username:str
     email:str
     password:str
 
 class ShowUser(BaseModel):
-    name:str
+    username:str
     email:str
     blogs:List[Blog]
+    class Config():
+        orm_mode = True
+class blogcreator(BaseModel):
+    username:str
+    email:str
     class Config():
         orm_mode = True
 
 class ShowBlog(BaseModel):
     title:str
     body:str
-    creator: ShowUser
+    creator: blogcreator
     class Config():
         orm_mode = True
 
